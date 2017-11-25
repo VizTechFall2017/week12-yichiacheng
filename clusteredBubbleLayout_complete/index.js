@@ -38,8 +38,11 @@ d3.csv('./banks.csv', function(banks){
     //console.log(d3.max(countryList.map(function(d){return d.assets})));
     radiusScale.domain([0, d3.max(banks.map(function(d){return d.assets}))]);
 
+    var clusterList = [];
+
     uniqueList.forEach(function(d, i){
-         clusterLookup.set(d, i);
+        clusterLookup.set(d, i);
+        clusterList.push({cluster:i});
     });
 
     //console.log(clusterLookup.get("China"));
@@ -48,35 +51,68 @@ d3.csv('./banks.csv', function(banks){
         d.cluster = clusterLookup.get(d.country);
     });
 
+    clusterList.forEach(function(d){
+        d.maxAsset = d3.max(banks.map(function(e){
+                if(e.cluster == d.cluster){return +e.assets}
+                else{return 0;}
+            }
+
+        ));
+    });
+
     var forceCollide = d3.forceCollide()
         .radius(function(d) { return radiusScale(d.assets) + 1.5; })
         .iterations(1);
 
-   var force = d3.forceSimulation()
-       .nodes(banks)
-       .force("center", d3.forceCenter())
-       .force("collide", forceCollide)
-       .force("gravity", d3.forceManyBody(30))
-       .force("x", d3.forceX().strength(.7))
-       .force("y", d3.forceY().strength(.7))
-       .on("tick", tick);
+    //d3.forceSimulation(nodeData).alphaDecay(0.03).force("attractForce",attractForce).
 
-   var circle = svg.selectAll("circle")
-       .data(banks)
-       .enter().append("circle")
-       .attr("r", function(d) { return radiusScale(d.assets); })
-       .style("fill", function(d) { return colorScale(d.cluster); });
+    var force = d3.forceSimulation()
+        .nodes(banks)
+        //.alphaDecay(.09)
+        .velocityDecay(.9)
+        .force("center", d3.forceCenter())
+        .force("collide", forceCollide)
+        .force("cluster", forceCluster)
+        .force("gravity", d3.forceManyBody(30))
+        .force("x", d3.forceX().strength(.7))
+        .force("y", d3.forceY().strength(.7))
+        .on("tick", tick);
 
-   circle.append('title').text(function(d){return d.bank + '; ' + d.country});
+    var circle = svg.selectAll("circle")
+        .data(banks)
+        .enter().append("circle")
+        .attr("r", function(d) { return radiusScale(d.assets); })
+        .style("fill", function(d) { return colorScale(d.cluster); });
 
-   function tick() {
-       circle
-           .attr("cx", function(d) { return d.x; })
-           .attr("cy", function(d) { return d.y; });
-   }
+    circle.append('title').text(function(d){return d.bank + '; ' + d.country});
 
+    function tick() {
+        circle
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+    }
+
+
+    function forceCluster(alpha) {
+        for (var i = 0, n = banks.length; i < n; ++i) {
+
+            var node = banks[i];
+            var cluster = clusterList[node.cluster];
+            var k = alpha * 2;
+
+            //console.log(node.assets, cluster.maxAsset);
+
+            if (node.assets == cluster.maxAsset){
+                cluster.x = node.x;
+                cluster.vx = node.vx;
+                cluster.y = node.y;
+                cluster.vy = node.vy;
+            }
+
+            node.vx -= (node.x - cluster.x) * k;
+            node.vy -= (node.y - cluster.y) * k;
+
+        }
+    }
 
 });
-
-
-
