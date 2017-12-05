@@ -147,7 +147,8 @@ d3.queue()
                 })
                     .on('mouseout', function(d) {
                         d3.select(this)
-                            .attr('fill', 'slategray');
+                            .attr('fill', 'slategray')
+
                     });
 
 
@@ -248,12 +249,14 @@ d3.queue()
 
                         d3.select(this).attr("class","incident hover");
                         d3.select(this).attr("fill","forestgreen");
-
+                        d3.select(this).attr("r","5");
 
 
                     })
                     .on("mouseout", function(d){
-                        d3.select(this).attr("fill",'black');})
+                        d3.select(this)
+                            .attr("fill",'black');
+                        d3.select(this).attr("r","3");})
 
 
                 svg2.selectAll('circle2')
@@ -274,12 +277,13 @@ d3.queue()
 
                         d3.select(this).attr("class","incident hover");
                         d3.select(this).attr("fill","darkorange");
-
+                        d3.select(this).attr("r","5");
 
 
                     })
                     .on("mouseout", function(d){
-                        d3.select(this).attr("fill",'black');})
+                        d3.select(this).attr("fill",'black');
+                        d3.select(this).attr("r","3")})
 
 
 
@@ -303,12 +307,13 @@ d3.queue()
 
                         d3.select(this).attr("class","incident hover");
                         d3.select(this).attr("fill","red");
-
+                        d3.select(this).attr("r","5");
 
 
                     })
                     .on("mouseout", function(d){
-                        d3.select(this).attr("fill",'black');})
+                        d3.select(this).attr("fill",'black');
+                        d3.select(this).attr("r","3")})
 
 
                 svg2.selectAll('circle4')
@@ -329,12 +334,13 @@ d3.queue()
 
                         d3.select(this).attr("class","incident hover");
                         d3.select(this).attr("fill","royalBlue");
-
+                        d3.select(this).attr("r","5");
 
 
                     })
                     .on("mouseout", function(d){
-                        d3.select(this).attr("fill",'black');})
+                        d3.select(this).attr("fill",'black');
+                        d3.select(this).attr("r","3")})
 
 
 
