@@ -43,24 +43,28 @@
 		div.neighborhoodsprofile p{
 			padding-left: 5%;
 			padding-right: 5%}
+
+
 		.sidebar{
-			background:dimgray;
+			background-image:url(harbor.png);
 			height:60vh;
+
 		}
 		.titleRow{
 			font-size: 16pt;
 			font-weight: bold;
 			height:60px;
-			color: white;
+			color: black;
 		}
 		.label{
-			font-size: 14pt;
-			font-weight: normal;
-			color: white;
+			font-size: 12pt;
+			font-weight: bold;
+			color: black;
+
 		}
 		.entry{
-			font-size: 14pt;
-			color: white;
+			font-size: 12pt;
+			color: black;
 		}
 		.axis path,
 		.axis line {
@@ -199,7 +203,7 @@
 
 
 
-		<svg  width="600" height="350" id="svg1"></svg>
+		<svg  width="750" height="350" id="svg1"></svg>
 	</div>
 
 
@@ -215,10 +219,10 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<svg  width="600" height="500" id="svg2"></svg>
 		</div>
-		<div class="col-md-3 sidebar">
+		<div class="col-md-4 sidebar">
 			<div class="row">
 				<div class="col-md-12 titleRow" id="title">
 					Neighborhood
@@ -226,14 +230,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 label">
-					Crime Rate:
+					<p align="left">Crime Rate</p>
 				</div>
 				<div class="col-md-6 entry" id="crimerate">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 label">
-					Population Density:
+					<p align="left">Population Density</p>
 				</div>
 				<div class="col-md-6 entry" id="density">
 
@@ -241,14 +245,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 label">
-					Numbers of T station:
+					<p align="left">No. of T station</p>
 				</div>
 				<div class="col-md-6 entry" id="tstation">
 				</div>
 
 			</div><div class="row">
 				<div class="col-md-6 label">
-					Description:
+					<p align="left">Description</p>
 				</div>
 				<div class="col-md-6 entry" id="description">
 				</div>

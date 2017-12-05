@@ -1,26 +1,26 @@
 neighborhoods,crimerate,density,tstation,description
-Allston,12.1,18505,8,text
-Brighton,12.1,15786,5,text
-Roxbury,30.1,23831,1,text
-Jamaica Plain,19,22567,4,text
-East Boston,14.4,27604,5,text
-Fenway,35,19291,8,text
-Mattapan,43.3,12490,0,text
-South End,35,42624,1,text
-Roslindale,8.3,6389,0,text
-North End,41.7,27580,1,text
-Hyde Park,20,6784,0,text
-West Roxbury,8.3,4947,0,text
-Back Bay,35,14775,5,text
-Beacon Hill,35,47862,1,text
-Charlestown,15.6,11756,0,text
-South Boston,28.1,11837,2,text
-Misson Hill,30.1,26317,1,text
-Dorchester,13.1,18729,6,text
-Harbor Islands,3.1,415,0,text
-Longwood Medical Area,35,21763,1,text
-Chinatown,41.7,42158,1,text
-Downtown,41.7,21954,6,text
-Leather District,41.7,21763,1,text
-West End,41.7,29500,3,text
-South Boston Waterfront,28.1,36532,0,text
+Allston,12.1,18505 per square mile,8,Close to many colleges and universities in and around the City. It is known for its huge student population.
+Brighton,12.1,15786 per square mile,5,text
+Roxbury,30.1,23831 per square mile,1,text
+Jamaica Plain,19,22567 per square mile,4,Locals call Jamaica Plain: JP. The classic streetcar suburb that has become one of the most dynamic neighborhoods in Boston. Surrounded by the Emerald Necklace/ Arnold Arboretum/ Franklin Park and Jamaica Pond.
+East Boston,14.4,27604 per square mile,5,text
+Fenway,35,19291 per square mile,8,text
+Mattapan,43.3,12490 per square mile,0,text
+South End,35,42624 per square mile,0,text
+Roslindale,8.3,6389 per square mile,0,text
+North End,41.7,27580 per square mile,0,text
+Hyde Park,20,6784 per square mile,0,Has all the amenities of the City in a suburban environment. The neighborhood was annexed into the City in 1912. The Neponset River runs through its center.
+West Roxbury,8.3,4947 per square mile,0,Was once home to an experimental utopian community. Famous writers like Ralph Waldo Emerson/ Nathaniel Hawthorne/ Henry David Thoreau visited the area.
+Back Bay,35,1477 per square mile5,5,One of the most appealing neighborhoods in America. Unique shops/trendy restaurants and vintage homes are found on its main streets.
+Beacon Hill,35,47862 per square mile,1,Home to the Massachusetts State House and many historical landmarks. Architecture and layout reflect old colonial Boston. Brick row houses feature ornate doors and decorative iron work.
+Charlestown,15.6,11756 per square mile,0,text
+South Boston,28.1,11837 per square mile,2,text
+Mission Hill,30.1,26317 per square mile,1,text
+Dorchester,13.1,18729 per square mile,6,The largest neighborhood in Boston is also one of the most diverse. Long-time residents mingle together with new immigrants from many countries.
+Harbor Islands,3.1,415 per square mile,0,text
+Longwood Medical Area,35,21763 per square mile,2,text
+Chinatown,41.7,42158 per square mile,1,text
+Downtown,41.7,21954 per square mile,6,text
+Leather District,41.7,21763 per square mile,1,text
+West End,41.7,29500 per square mile,3,text
+South Boston Waterfront,28.1,36532 per square mile,0,text
