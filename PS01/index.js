@@ -128,7 +128,7 @@ d3.queue()
             .append("path")                 //add the paths to the DOM
             .attr("d", path)                //actually draw them
             .attr("class", "feature")
-            .attr('fill','darkgray')
+            .attr('fill','slategray')
             .attr('stroke','white')
             .attr('stroke-width',.2)
 
@@ -143,11 +143,11 @@ d3.queue()
 
 
                 d3.select(this)
-                    .attr('fill', 'slategray');
+                    .attr('fill', 'LightSteelBlue');
                 })
                     .on('mouseout', function(d) {
                         d3.select(this)
-                            .attr('fill', 'darkgray');
+                            .attr('fill', 'slategray');
                     });
 
 
