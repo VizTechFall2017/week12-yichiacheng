@@ -25,7 +25,7 @@ var svg2 = d3.select('#svg2')
 
 //set up the projection for the map
 var albersProjection = d3.geoAlbers()  //tell it which projection to use
-    .scale(140000)//tell it how big the map should be
+    .scale(130000)//tell it how big the map should be
     .rotate([71.057, 0])
     .center([0, 42.313])
     .translate([(width/2), (height/2)]);
@@ -128,7 +128,7 @@ d3.queue()
             .append("path")                 //add the paths to the DOM
             .attr("d", path)                //actually draw them
             .attr("class", "feature")
-            .attr('fill','gainsboro')
+            .attr('fill','darkgray')
             .attr('stroke','white')
             .attr('stroke-width',.2)
 
@@ -147,7 +147,7 @@ d3.queue()
                 })
                     .on('mouseout', function(d) {
                         d3.select(this)
-                            .attr('fill', 'gainsboro');
+                            .attr('fill', 'darkgray');
                     });
 
 
