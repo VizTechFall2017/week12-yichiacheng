@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Where to Live in Boston?</title>
+
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<style>
+		div.background {
+			background: url(bostonbgi.png); width: 100% ;height: 100%;
+		}
+		div.transbox h1 {
+			padding-left: 5%;
+			padding-top: 5%;
+			padding-bottom: 2%;
+			color: white;
+		}
+		div.transbox p {
+			padding-left: 5%;
+			padding-top: 0%;
+			padding-bottom: 5%;
+			color: white;
+		}
+		div.bostonrent h3{
+			padding-top: 2%;
+			padding-left: 5%;
+			padding-right: 5%}
+		div.bostonrent p{
+			padding-left: 5%;
+			padding-right: 5%}
+		div.neighborhoodsprofile h3{
+			padding-left: 5%;
+			padding-right: 5%}
+		div.neighborhoodsprofile p{
+			padding-left: 5%;
+			padding-right: 5%}
+		.sidebar{
+			background:dimgray;
+			height:60vh;
+		}
+		.titleRow{
+			font-size: 16pt;
+			font-weight: bold;
+			height:60px;
+			color: white;
+		}
+		.label{
+			font-size: 14pt;
+			font-weight: normal;
+			color: white;
+		}
+		.entry{
+			font-size: 14pt;
+			color: white;
+		}
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: #555;
+		}
+		.axis text {
+			fill: #555;
+		}
+		.line {
+			fill: none;
+			stroke: #ef0d0c;
+			stroke-width: 1.5px;
+		}
+		#content {
+			display: block;
+			width: 100%;
+			height: 100%;
+			min-width: 300px;
+			max-width: 1060px;
+			max-height: 500px;
+			overflow: hidden;
+		}
+		#button-container {
+			width: 600px;
+			margin: 30px auto;
+			padding:30px;
+		}
+		button {
+			cursor: pointer;
+			font-size: 16px;
+			display: inline;
+			padding: 10px;
+			margin: 0 20px;
+			color: black;
+			background-color: white;
+			border-style: solid;
+			border-width: 2px;
+			border-color: black;
+		}
+		.bar {
+			fill: slategray;
+		}
+		.bar:hover {
+			fill: lightSTEELBLUE;
+		}
+		.axis--x path {
+			display: none;
+		}
+		.toolTip {
+			position: absolute;
+			display: none;
+			min-width: 80px;
+			height: auto;
+			background: WhiteSmoke;
+			padding: 10px;
+			text-align: center;
+			opacity: 0.8;
+			border-radius: 5px;
+		}
+		.radio {
+			padding-left: 50px;
+		}
+	</style>
+
+	<!-- Bootstrap JS is a JS library with pre-made functionality. Requires jQuery and popper.js to run.
+         JQuery is a very powerful, general-purpose library that can manipulate the DOM
+         Popper is a new positioning library for tooltips. It was annoying to integrate locally, so using a web link here.-->
+	<script src="./libraries/jquery-3.2.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="./libraries/bootstrap.js"></script>
+	<script src="./libraries/d3.v4.2.6.min.js"></script>
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="background">
+					<div class="transbox">
+						<h1>
+							Where to Live in Boston?
+						</h1>
+
+						<p>
+							So you took the plunge and moved to Boston alone. <strong>Big decision. Huge.</strong><br/>
+							But now comes the more important ruling: settling on which neighborhood to live in.<br/>
+							Is it about location or rent? Is it about how close to the T? Or you value more on safety?<br/>
+							<br/>
+							Here is a complete guide to help you decide from four aspects: <br/>
+							<strong>Rent Trend, Locations of T Stations,
+								Commute Time and Ways </strong>in all neigborhoods of Boston.
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="row">
+				<div class="bostonrent">
+					<h3>
+						Boston Rent Trend from 2015-2017 (1-bedroom)
+					</h3>
+					<br>
+					<p>
+						If you are considering to live in the smae apartment for long term, and budget is one of your major factors,</br>
+						check the latest three year average rent by neighborhoods in Boston.
+
+					</p>
+				</div>
+			</div>
+			<div class="twelve columns svg-container">
+
+				<div class='radio'>
+					<label class='radio-inline'>
+						<input type="radio" name="year" value="2017" onclick='change("2017")'> 2017
+					</label>
+					<label class='radio-inline'>
+						<input type="radio" name="year" value="2016" onclick='change("2016")'> 2016
+					</label>
+					<label class='radio-inline'>
+						<input type="radio" name="year" value="2015" onclick='change("2015")'> 2015
+					</label>
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<svg  width="600" height="350" id="svg1"></svg>
+	</div>
+
+
+	<div class="row">
+		<div class="neighborhoodsprofile">
+			<h3>
+				Boston Neighborhoods Profile
+			</h3>
+			<p>
+				Boston in general is a busy city. And parking Boston could be hard and expensive. Living closer to T-station might be a good choice! Are you wondering
+				which neighborhood has more train station, or which neighborhood is more quiet? Check out the Boston neighborhood profile!
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<svg  width="600" height="500" id="svg2"></svg>
+		</div>
+		<div class="col-md-3 sidebar">
+			<div class="row">
+				<div class="col-md-12 titleRow" id="title">
+					Neighborhood
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 label">
+					Crime Rate:
+				</div>
+				<div class="col-md-6 entry" id="crimerate">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 label">
+					Population Density:
+				</div>
+				<div class="col-md-6 entry" id="density">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 label">
+					Numbers of T station:
+				</div>
+				<div class="col-md-6 entry" id="tstation">
+				</div>
+
+			</div><div class="row">
+				<div class="col-md-6 label">
+					Description:
+				</div>
+				<div class="col-md-6 entry" id="description">
+				</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+<script src="./index.js"></script>
+</html>

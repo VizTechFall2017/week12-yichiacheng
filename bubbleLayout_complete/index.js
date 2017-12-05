@@ -31,6 +31,7 @@ d3.csv('./banks.csv', function(banks){
         //if that index is the same as its value in the original array, then it must be the first time you've seen it.
         //Add that to your current array, and keep going. This throws out all duplicate copies, and returns an array
         //with only the unique countries listed.
+        //上面在講什麼完全聽不懂
         return a.indexOf(d) == i;
     });
 
@@ -49,14 +50,14 @@ d3.csv('./banks.csv', function(banks){
     });
 
     var forceCollide = d3.forceCollide()
-        .radius(function(d) { return radiusScale(d.assets) + 1.5; })
+        .radius(function(d) { return radiusScale(d.assets) + 3.5; })//圓跟圓中間的距離
         .iterations(1);
 
    var force = d3.forceSimulation()
        .nodes(banks)
-       .force("center", d3.forceCenter())
-       .force("collide", forceCollide)
-       .force("gravity", d3.forceManyBody(30))
+       .force("center", d3.forceCenter())//讓圓的中心在中間
+       .force("collide", forceCollide)//防止圓重疊
+       .force("gravity", d3.forceManyBody(30))//模擬重力的效果
        .force("x", d3.forceX().strength(.7))
        .force("y", d3.forceY().strength(.7))
        .on("tick", tick);

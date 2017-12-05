@@ -1,0 +1,27 @@
+div.background {
+    background: url(bostonbgi.png); width: 100% ;
+
+}
+
+div.transbox h1 {
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: white;
+}
+
+div.transbox p {
+    padding-left: 5%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    color: white;
+}
+div.bostonrent h3{
+    padding-left: 5%;
+    padding-right: 5%}
+
+div.bostonrent p{
+    padding-left: 5%;
+    padding-right: 5%}
+
+

@@ -93,7 +93,7 @@ d3.csv('./banks.csv', function(banks){
     }
 
 
-    function forceCluster(alpha) {
+    function forceCluster(alpha) {   //把相同國家的銀行拉在一起
         for (var i = 0, n = banks.length; i < n; ++i) {
 
             var node = banks[i];
